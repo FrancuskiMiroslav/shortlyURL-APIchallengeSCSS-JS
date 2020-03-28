@@ -1,0 +1,36 @@
+$main_font: "Poppins", sans-serif;
+$secondary_font: "Gilroy", cursive;
+
+@import url("https://fonts.google.com/specimen/Poppins:500,700");
+
+@import url("https://fonts.googleapis.com/css?family=Baloo+Bhai");
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Light.otf");
+  src: url("../fonts/Gilroy-ExtraBold.otf");
+}
+$cyan: hsl(180, 66%, 49%);
+$dark-violet: hsl(257, 27%, 26%);
+$red: hsl(0, 87%, 67%);
+$grey: hsl(0, 0%, 75%);
+$greyish-violet: hsl(257, 7%, 63%);
+$very-dark-blue: hsl(255, 11%, 22%);
+$very-dark-violet: hsl(260, 8%, 14%);
+
+$primary_clr: $cyan;
+$secondary_clr: $red;
+$tertiary_clr: $dark-violet;
+$link_clr: $greyish-violet;
+
+$show-image: true;
+$home-image: url(../images/home-bg-min.jpg);
+$background-opacity: 0.85;
+
+$fw-normal: 400;
+$fw-bold: 700;
+
+$min_width: 320px;
+$max_width: 3840px;
+$min_font: 14px;
+$max_font: 24px;
