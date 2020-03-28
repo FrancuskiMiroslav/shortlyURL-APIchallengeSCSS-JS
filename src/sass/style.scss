@@ -4,7 +4,7 @@
 
 @include main;
 
-header {
+.header {
   min-height: 125px;
 }
 
@@ -17,6 +17,7 @@ header {
   width: 100%;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 100;
 
   a {
     color: $link_clr;
@@ -51,6 +52,7 @@ header {
   &__logo {
     font-size: 25px;
     margin-right: 40px;
+    display: flex;
   }
 
   &__nav-list {
@@ -104,10 +106,6 @@ header {
 
       @include media-max-width(700) {
         width: 100%;
-      }
-
-      &:hover {
-        background-color: rgba($color: $secondary_clr, $alpha: 0.5);
       }
     }
 
@@ -263,12 +261,68 @@ header {
   }
 }
 
-main {
-  height: 200px;
-  background-color: $tertiary_clr;
-}
+.main {
+  position: relative;
+  .main-banner {
+    @include wrapper(1160, 25);
+    min-height: 700px;
 
-footer {
-  height: 50px;
-  background-color: $primary_clr;
+    @include media-max-width(700) {
+      display: flex;
+      flex-direction: column-reverse;
+      width: 100%;
+      padding: 0;
+    }
+
+    &__info {
+      width: 40%;
+      padding-top: 75px;
+      z-index: -5;
+
+      @include media-max-width(700) {
+        width: 100%;
+        text-align: center;
+        padding: 25px;
+      }
+
+      h1 {
+        font-size: 56px;
+        font-weight: 700;
+        margin-bottom: 30px;
+      }
+
+      p {
+        font-size: 20px;
+        margin-bottom: 40px;
+        color: $link_clr;
+      }
+
+      .btn {
+        @include btn;
+      }
+    }
+
+    &__image {
+      position: absolute;
+      right: 0;
+      top: 0;
+      max-width: 60%;
+      z-index: -50;
+      overflow: hidden;
+
+      @include media-max-width(700) {
+        position: relative;
+        max-width: 100%;
+        padding: 0;
+      }
+
+      img {
+        overflow: hidden;
+        width: 130%;
+        @include media-max-width(700) {
+          width: 140%;
+        }
+      }
+    }
+  }
 }

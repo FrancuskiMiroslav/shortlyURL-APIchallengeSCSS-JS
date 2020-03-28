@@ -101,6 +101,10 @@
   border-radius: 50px;
   font-weight: 700;
   cursor: pointer;
+
+  &:hover {
+    background-color: rgba($color: $secondary_clr, $alpha: 0.5);
+  }
 }
 
 @mixin easeOut {
