@@ -135,14 +135,14 @@ window.onload = function() {
     container.insertAdjacentHTML(
       "afterbegin",
       `
-  <div class="item">
-  <a href="${link}" class="item__link">${link}</a>
-  <div>
-  <a href="${shortLink}" id="shortLink" class="item__shortlink">${shortLink}</a>
-  <button id="copy" class="btn copy">Copy</button>
-  </div>
-  
-  </div>
+      <div class="item">
+        <a href="${link}" class="item__link">${link}</a>
+        <div class="short-link-btn">
+          <a href="${shortLink}" id="shortLink" class="item__shortlink">${shortLink}</a>
+          <button id="copy" class="btn copy">Copy</button>
+        </div>
+      
+      </div>
   `
     );
   }
