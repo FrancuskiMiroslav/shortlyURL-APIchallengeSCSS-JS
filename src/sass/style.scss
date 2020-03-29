@@ -410,10 +410,11 @@
 
     &__container {
       display: flex;
-      @include wrapper(1160, 25);
+      @include wrapper(1160, 0);
       justify-content: space-between;
       position: relative;
       flex-wrap: wrap;
+      margin: 0 25px;
 
       &:before {
         content: "";
