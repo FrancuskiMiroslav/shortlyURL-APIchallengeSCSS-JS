@@ -176,6 +176,7 @@
     background-color: $primary_clr;
     padding: 0 2%;
     box-shadow: 2px 7px 10px -4px rgba(0, 0, 0, 0.75);
+    border-radius: 0px 0 10px 10px;
     @include media-max-width(700) {
       height: 50px;
       padding: 0 25px;
@@ -266,6 +267,7 @@
   .main-banner {
     @include wrapper(1160, 25);
     min-height: 700px;
+    margin-bottom: 60px;
 
     @include media-max-width(700) {
       display: flex;
@@ -277,12 +279,12 @@
     &__info {
       width: 40%;
       padding-top: 75px;
-      z-index: -5;
 
       @include media-max-width(700) {
         width: 100%;
         text-align: center;
         padding: 25px;
+        margin-bottom: 80px;
       }
 
       h1 {
@@ -322,6 +324,176 @@
         @include media-max-width(700) {
           width: 140%;
         }
+      }
+    }
+  }
+
+  .boxes {
+    background-color: $light-grey;
+    min-height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 115px 0;
+
+    .url {
+      background-image: url(../svg/bg-shorten-desktop.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: $dark-violet;
+      position: absolute;
+      top: 0;
+      transform: translateY(-50%);
+      min-height: 170px;
+      width: 100%;
+      @include wrapper(1160, 25);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px 65px;
+      font-size: 20px;
+      border-radius: 10px;
+
+      @include media-max-width(700) {
+        flex-direction: column;
+        padding: 25px;
+        background-image: url(../svg/bg-shorten-mobile.svg);
+        background-position: right top;
+        background-size: inherit;
+        width: calc(100% - 50px);
+      }
+
+      &__input {
+        width: 80%;
+        line-height: 65px;
+        outline: none;
+        border-radius: 10px;
+        font-size: 20px;
+        padding: 0 35px;
+        @include media-max-width(700) {
+          width: 100%;
+          margin-bottom: 16px;
+        }
+      }
+
+      &__btn {
+        @include btn;
+        height: 65px;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        padding: 15px 40px;
+        justify-content: center;
+        @include media-max-width(700) {
+          width: 100%;
+        }
+      }
+    }
+
+    &__info {
+      @include wrapper(1160, 25);
+      margin-top: 100px;
+      text-align: center;
+      max-width: 510px;
+
+      h2 {
+        font-size: 26px;
+        margin-bottom: 40px;
+      }
+
+      p {
+        color: $link_clr;
+        margin-bottom: 110px;
+      }
+    }
+
+    &__container {
+      display: flex;
+      @include wrapper(1160, 25);
+      justify-content: space-between;
+      position: relative;
+      flex-wrap: wrap;
+
+      &:before {
+        content: "";
+        border: 5px solid $primary_clr;
+        width: 90%;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include media-max-width(700) {
+          height: 93%;
+          top: 0;
+          width: 0%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      @include media-max-width(700) {
+        flex-direction: column;
+      }
+    }
+
+    &__box {
+      background-color: #ffffff;
+      position: relative;
+      padding: 50px 32px;
+      width: 31.5%;
+      height: 100%;
+
+      @include media-max-width(700) {
+        width: 100%;
+        margin-bottom: 50px;
+        text-align: center;
+      }
+
+      &:nth-of-type(n + 2) {
+        @include media-max-width(700) {
+          margin-top: 50px;
+        }
+      }
+
+      &:nth-of-type(2) {
+        margin-top: 45px;
+      }
+
+      &:nth-of-type(3) {
+        margin-top: 90px;
+        @include media-max-width(700) {
+          margin-top: 50px;
+        }
+      }
+
+      &__icon {
+        position: absolute;
+        left: 30px;
+        top: 0;
+        transform: translateY(-50%);
+        background-color: $tertiary_clr;
+        border-radius: 50%;
+        width: 90px;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include media-max-width(700) {
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      h3 {
+        margin: 32px 0;
+        font-size: 16px;
+      }
+
+      p {
+        color: $link_clr;
       }
     }
   }
