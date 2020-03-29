@@ -698,16 +698,17 @@ a {
   display: flex;
   max-width: 1160px;
   margin: 0 auto;
-  padding: 0 25px;
+  padding: 0 0px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: 0 25px;
 }
 
-/* line 418, src/sass/style.scss */
+/* line 419, src/sass/style.scss */
 .main .boxes__container:before {
   content: "";
   border: 5px solid #2acfcf;
@@ -720,7 +721,7 @@ a {
 }
 
 @media (max-width: 700px) {
-  /* line 418, src/sass/style.scss */
+  /* line 419, src/sass/style.scss */
   .main .boxes__container:before {
     height: 93%;
     top: 0;
@@ -741,7 +742,7 @@ a {
   }
 }
 
-/* line 441, src/sass/style.scss */
+/* line 442, src/sass/style.scss */
 .main .boxes__box {
   background-color: #ffffff;
   position: relative;
@@ -751,7 +752,7 @@ a {
 }
 
 @media (max-width: 700px) {
-  /* line 441, src/sass/style.scss */
+  /* line 442, src/sass/style.scss */
   .main .boxes__box {
     width: 100%;
     margin-bottom: 50px;
@@ -760,30 +761,30 @@ a {
 }
 
 @media (max-width: 700px) {
-  /* line 454, src/sass/style.scss */
+  /* line 455, src/sass/style.scss */
   .main .boxes__box:nth-of-type(n + 2) {
     margin-top: 50px;
   }
 }
 
-/* line 460, src/sass/style.scss */
+/* line 461, src/sass/style.scss */
 .main .boxes__box:nth-of-type(2) {
   margin-top: 45px;
 }
 
-/* line 464, src/sass/style.scss */
+/* line 465, src/sass/style.scss */
 .main .boxes__box:nth-of-type(3) {
   margin-top: 90px;
 }
 
 @media (max-width: 700px) {
-  /* line 464, src/sass/style.scss */
+  /* line 465, src/sass/style.scss */
   .main .boxes__box:nth-of-type(3) {
     margin-top: 50px;
   }
 }
 
-/* line 471, src/sass/style.scss */
+/* line 472, src/sass/style.scss */
 .main .boxes__box__icon {
   position: absolute;
   left: 30px;
@@ -806,7 +807,7 @@ a {
 }
 
 @media (max-width: 700px) {
-  /* line 471, src/sass/style.scss */
+  /* line 472, src/sass/style.scss */
   .main .boxes__box__icon {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
@@ -814,13 +815,13 @@ a {
   }
 }
 
-/* line 490, src/sass/style.scss */
+/* line 491, src/sass/style.scss */
 .main .boxes__box h3 {
   margin: 32px 0;
   font-size: 16px;
 }
 
-/* line 495, src/sass/style.scss */
+/* line 496, src/sass/style.scss */
 .main .boxes__box p {
   color: #9e9aa7;
 }
