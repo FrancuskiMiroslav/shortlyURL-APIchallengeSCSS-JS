@@ -398,6 +398,15 @@
         position: absolute;
         bottom: 20px;
         font-style: italic;
+
+        @include media-max-width(700) {
+          display: none;
+          position: relative;
+          text-align: left;
+          margin-bottom: 30px;
+          margin-top: 20px;
+          width: 100%;
+        }
       }
     }
 
@@ -418,11 +427,42 @@
         border-radius: 10px;
         margin-bottom: 20px;
         padding: 25px;
+        @include media-max-width(700) {
+          align-items: flex-start;
+        }
+
+        &__link {
+          text-align: left;
+          margin-bottom: 25px;
+          color: #000;
+        }
+
+        &__shortlink {
+          color: $primary_clr;
+        }
+
+        .short-link-btn {
+          @include media-max-width(700) {
+            width: 100%;
+            border-top: 1px solid $link_clr;
+            padding-top: 25px;
+          }
+        }
+
+        @include media-max-width(700) {
+          flex-direction: column;
+        }
 
         .copy {
           border-radius: 10px;
           padding: 20px 40px;
           margin-left: 20px;
+          @include media-max-width(700) {
+            display: block;
+            width: 100%;
+            margin: 0;
+            margin-top: 20px;
+          }
         }
 
         .copied-btn {
